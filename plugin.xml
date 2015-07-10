@@ -58,6 +58,14 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
+        
+        <hook
+            type="after_platform_add"
+            src="scripts/ios/didRegisterUserNotificationSettings.js" />
+
+        <hook
+            type="after_plugin_install"
+            src="scripts/ios/didRegisterUserNotificationSettings.js" />
 
         <header-file src="src/ios/APPLocalNotification.h" />
         <source-file src="src/ios/APPLocalNotification.m" />
@@ -71,13 +79,13 @@
         <header-file src="src/ios/UILocalNotification+APPLocalNotification.h" />
         <source-file src="src/ios/UILocalNotification+APPLocalNotification.m" />
 
-        <hook
+        <!--hook
             type="after_platform_add"
             src="scripts/ios/didRegisterUserNotificationSettings.js" />
 
         <hook
             type="after_plugin_install"
-            src="scripts/ios/didRegisterUserNotificationSettings.js" />
+            src="scripts/ios/didRegisterUserNotificationSettings.js" /-->
 
     </platform>
 
